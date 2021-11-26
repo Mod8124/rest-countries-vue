@@ -2,7 +2,7 @@
   <main>
           <div class="search">
           <div class="searchIcon">
-               <i class="fas fa-search"></i>
+             <svg fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="10.5" r="7.5"/><line x1="21" x2="15.8" y1="21" y2="15.8"/></svg>
                 <input type="text"  v-model="search" placeholder="Search for a country">
           </div>
     </div>
@@ -70,8 +70,6 @@ export default {
         load();
         
       
-
-        console.log(countries.value)
 
       return {region, countries, error, search, matching, continent, show, click}
      } ,

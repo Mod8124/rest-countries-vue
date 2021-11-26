@@ -19,7 +19,7 @@
   color: #111517;
 }
 
-.active i {
+.active svg {
   color: #858585;
 }
 
@@ -93,8 +93,9 @@
   color: white;
 }
 
-.dark i {
+.dark .searchIcon svg {
   color: white;
+  stroke: white;
 }
 
 .dark select {
@@ -167,9 +168,11 @@ main {
   padding-bottom: 20px;
 }
 
-.searchIcon i {
+.searchIcon svg {
   position: absolute;
   cursor: pointer;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
 .searchIcon input {
@@ -181,13 +184,6 @@ main {
 
 .searchIcon input::placeholder {
   padding-left: 70px;
-}
-
-.fa-search {
-  padding: 13px;
-  padding-left: 20px;
-  min-width: 70px;
-  text-align: center;
 }
 
 .err {
