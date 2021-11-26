@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="{active: active, dark: dark}">
+           <header>
+        <nav>
+            <a href="#">Where in the world ?</a>
+            <a @click="active = !active, dark = !dark" class="moon">   <i  :class="{'fas fa-moon':dark, 'far fa-moon':active }"></i> Dark Mode</a>
+        </nav>
+    </header>
+       <Input :active="active" :dark="dark"/>
+  </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import Input from '../components/Input.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+Input
+  },
+  data() {
+    return {
+      active:true,
+      dark: false,
+    }
   }
 }
 </script>
