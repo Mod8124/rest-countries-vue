@@ -99,6 +99,7 @@
 
 .dark input {
     background-color:$DarkBlue ;
+    color:$white;
     box-shadow: 0px 0px 10px 2px  rgba(0, 0, 0, 0.1);
 }
 
@@ -184,16 +185,12 @@ main {
 
 .search {
     padding: 50px 20px ;
-    padding-bottom: 20px;
-    
+    padding-bottom: 20px;  
 }
 
-.searchIcon svg {
-    position: absolute;
-    cursor: pointer;
-   margin-left: 30px;
-   margin-top: 10px;
-
+#searchIcon {
+    width: 100%;
+    position: relative;
 }
 
 .searchIcon input {
@@ -201,11 +198,21 @@ main {
     border:none;
     padding: 10px;
     border-radius: 4px;
-}
-.searchIcon input::placeholder {
-    padding-left: 70px;
+    padding-left: 9%;
+    outline: none;
 }
 
+.searchIcon img {
+    cursor: pointer;
+    width: 20%;
+    max-width: 30px;
+    max-height: 30px;
+    height: 80%;
+    position:absolute;
+    left:4%;
+    top:10%;
+
+}
 
 .err {
     width: 100%;
@@ -287,15 +294,27 @@ main {
 
 .back {
     padding: 50px 20px ;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .back button {
-    padding: 4px 20px 4px 20px;
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
     border:none;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    text-decoration: none;
 
-    .fa-arrow-left {
-        padding-right: 8px;
+    img {
+        max-width: 30px;
     }
 }
 
@@ -576,6 +595,8 @@ main {
     }
 }
 
+
+
 //media queries details
 
 @media screen and (min-width:600px) {
@@ -593,6 +614,17 @@ main {
             width: 100%;
             height: 100%;
         }
+    }
+
+    .back button {
+        width: 14%;
+        max-width: 100px;
+    }
+}
+
+@media screen and (max-width:599px) {
+   .back button {
+        width: 20%;
     }
 }
 
@@ -638,6 +670,11 @@ main {
         padding-left: 80px;
     }
 
+    .back button {
+        width: 10%;
+    }
+
+
     .show {
         display: grid;
         grid-template-columns:50% 50%;
@@ -659,5 +696,7 @@ main {
             padding-top: 0px;
         }
     }
+
+    
 
 }

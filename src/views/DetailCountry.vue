@@ -9,7 +9,7 @@
     
   <div class="back">
         <router-link to="/">
-        <button><i class="fas fa-arrow-left"></i>Back</button>
+        <button> <img :src="active ? '/back.svg' : '/back_active.svg'" alt="">Back</button>
     </router-link> 
   </div>
   
