@@ -179,7 +179,7 @@ main {
   border: none;
   padding: 10px;
   border-radius: 4px;
-  padding-left: 9%;
+  padding-left: 20%;
   outline: none;
 }
 
@@ -357,6 +357,10 @@ main {
 @media screen and (min-width: 600px) {
   header nav a {
     font-size: 3.3vw;
+  }
+
+  .searchIcon input {
+    padding-left: 9%;
   }
 }
 @media screen and (min-width: 800px) {
